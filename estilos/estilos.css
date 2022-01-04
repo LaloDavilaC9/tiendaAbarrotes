@@ -1,0 +1,12 @@
+#carrito{
+    width: 100px;
+    position: absolute;
+    right: 2px;
+    top: 10px;
+}
+
+#buscador{
+    position: absolute;
+    top: 5px;
+    left: 500px
+}
