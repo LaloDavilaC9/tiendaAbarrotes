@@ -9,25 +9,28 @@
 </head>
 <body>
     <div id="buscador">
-
-
     <form action="procesa.php" method="POST">
         <input type="text" >
-        <input type="button" value="BUSCAR">
+        <input type="submit" id="botonBuscar" value="BUSCAR">
         
-
-
-
-
     </form>
 
+    </div> 
 
-    
-    </div>
     <h3>Tienda de abarrotes.com</h3>
-   
 
-    <img src="1.png"  id="carrito" alt="">
+    <?php 
+        include("metodos.php");
+        menu();
+
+    ?>
+
+
+
+
+    <img src="imagenes/halo.jpg"  id="top" alt="">
+
+
 
     
 </body>
