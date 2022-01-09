@@ -10,14 +10,14 @@
 <body>
     <div id="buscador">
     <form action="procesa.php" method="POST">
-        <input type="text" >
+        <input type="text" class="buscadorTexto">
         <input type="submit" id="botonBuscar" value="BUSCAR">
         
     </form>
 
     </div> 
 
-    <h3>Tienda de abarrotes.com</h3>
+    <h3 id="titulo">Tienda de abarrotes.com</h3>
 
     <?php 
         include("metodos.php");
@@ -26,9 +26,35 @@
     ?>
 
 
+    <div class="mejoresJuegos">
+        <table>
+            <tr>
+                <td>
+                    <a href=""  class="nombreJuego" >Nombre del juego</a>
+                </td>
+                <td>
+                    <img src="imagenes/halo.jpg" id="img" alt="">
+                </td>
+                <td>
+                    <b  class="precioJuego" >$1999.99</b>
+                </td>
+                <td>
+                    <i  class="ratingJuego">rating</i>
+                </td>
+                <td>
+                <b  class="cantidadJuego" >100 Unidades</b>
+                </td>
+            
+            </tr>
+        </table>
 
 
-    <img src="imagenes/halo.jpg"  id="top" alt="">
+
+    </div>
+
+
+
+
 
 
 

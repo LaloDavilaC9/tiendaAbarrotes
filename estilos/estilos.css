@@ -1,5 +1,5 @@
 #carrito{
-    width: 30px;
+    width: 60px;
     
 }
 
@@ -7,18 +7,26 @@
     cursor:pointer;
 }
 
-#top{
-    width: 500px;
-    position: absolute;
-    right: 500px;
-    top: 200px;
+#titulo{
+    font-size: 70%;
 }
 
-#buscador{
+
+.buscadorTexto{
     position: absolute;
     top: 5px;
-    left: 500px
-}
+    left: 300px;
+    width: 600px;
+    height: 30px;
+}   
+
+#botonBuscar{
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    width: 605px;
+    height: 30px;
+} 
 
 #principal{
     position: absolute;
@@ -28,4 +36,56 @@
 
 #botonBuscar:hover{
     cursor:pointer;
+}
+
+
+#img{
+    width: 200px;
+    position: relative;
+    top: 0px;
+    left: 50px
+
+}
+
+
+.nombreJuego{
+
+    width: 100px;
+    position: relative;
+    
+    left: 10px;
+}
+
+.precioJuego{
+
+    width: 100px;
+    position: relative;
+    
+    left: 100px;
+}
+
+.ratingJuego{
+
+    width: 100px;
+    position: relative;
+    
+    left: 200px;
+}
+.cantidadJuego{
+
+    width: 100px;
+    position: relative;
+    
+    left: 300px;
+}
+
+html{
+    font-size: 200%;
+}
+
+.mejoresJuegos{
+    border-style: groove;
+  border-width: 3px;
+  background-color: cornsilk;
+    
 }
