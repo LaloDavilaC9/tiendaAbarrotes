@@ -1,5 +1,100 @@
 <?php
 
+    function conectar(){
+        //Parametros de conexion.
+        $servername = 'localhost';
+        $database = 'tienda';
+        $username = "root";
+        $password = "";
+
+        //Crear la conexion.
+        $conn = mysqli_connect($servername, $username, $password, $database);
+        //Revisar si se realizo la conexion.
+        if(!$conn) {
+            die("ERROR: La conexion no se realizó correctamente." . mysqli_connect_error());
+        }
+        $cbd = mysqli_select_db($conn, $database);
+        if(!$cbd) {
+            die("ERROR DE CONEXION CON LA BASE DE DATOS");
+        }
+        return($conn);
+    }
+    
+    function paginaPrincipal(){
+        $conexion = conectar();
+        if (!$conexion) {
+            echo "Error";
+            return;
+        }
+        $sql = "SELECT * FROM producto WHERE rating = 5";
+        $result = $conexion->query($sql);
+        if ($result->num_rows>0) {
+            //si hay
+
+            echo "<div id='mejoresJuegos'>
+            <table id='tablaJuegos' border=1>";
+
+            while ($row=$result->fetch_assoc()) {
+                $id=$row['id_producto'];
+                $nombre=$row['nombre'];
+                $descripcion=$row['descripcion'];
+                $precio=$row['precio'];
+                $stock=$row['stock'];
+                $img=$row['img'];
+                $rating=$row['rating'];
+                $seccion=$row['seccion'];
+
+               echo  "
+            <tr>
+                <td>
+                    <a href=''  class='nombreJuego' >".$nombre."</a>
+                </td>
+                <td>
+                    <i  class='descripcion'>".$descripcion."</i>
+                </td>
+                <td>
+                    <b  class='precioJuego' >".$precio."</b>
+                </td>
+                <td>
+                    <b  class='cantidadJuego' >".$stock."</b>
+                </td>
+                <td>
+                    <img src='imagenes/".$img.".jpg' id='img' alt=''>
+                </td>
+                <td>
+                    <i  class='ratingJuego'>".$rating."</i>
+                </td>
+                <td>
+                    <i  class='seccion'>".$seccion."</i>
+                </td>
+             </tr>";
+
+
+
+
+            }
+            echo"</table></div>";
+
+
+
+
+
+
+
+
+
+
+                
+                
+            
+
+
+        }
+        
+    }
+
+
+
     function menu (){
         echo "<table border=1>
         <tr>
@@ -18,3 +113,4 @@
     
 
 ?>
+

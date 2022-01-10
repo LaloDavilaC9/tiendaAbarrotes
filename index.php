@@ -19,38 +19,23 @@
 
     <h3 id="titulo">Tienda de abarrotes.com</h3>
 
+   
     <?php 
         include("metodos.php");
         menu();
+        echo "<h4 id=tituloInicio >TOP JUEGOS DEL DIA</h4>";
+        paginaPrincipal();
+        
+        
 
     ?>
 
 
-    <div class="mejoresJuegos">
-        <table>
-            <tr>
-                <td>
-                    <a href=""  class="nombreJuego" >Nombre del juego</a>
-                </td>
-                <td>
-                    <img src="imagenes/halo.jpg" id="img" alt="">
-                </td>
-                <td>
-                    <b  class="precioJuego" >$1999.99</b>
-                </td>
-                <td>
-                    <i  class="ratingJuego">rating</i>
-                </td>
-                <td>
-                <b  class="cantidadJuego" >100 Unidades</b>
-                </td>
-            
-            </tr>
-        </table>
+       
 
 
 
-    </div>
+    
 
 
 

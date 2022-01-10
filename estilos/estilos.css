@@ -1,91 +1,100 @@
-#carrito{
-    width: 60px;
+
+     #carrito{
+        width: 60px;
+        
+    }
+    
+    #carrito:hover{
+        cursor:pointer;
+    }
+    
+    #titulo{
+        font-size: 20px;
+    }
+    
+    
+    .buscadorTexto{
+        position: absolute;
+        top: 5px;
+        left: 300px;
+        width: 600px;
+        height: 20px;
+    }   
+    
+    #botonBuscar{
+        position: absolute;
+        top: 30px;
+        left: 300px;
+        width: 605px;
+        height: 20px;
+    } 
+    
+    
+    #botonBuscar:hover{
+        cursor:pointer;
+    }
+    
+    #principal{
+        position: absolute;
+        top: 50px;
+        left: 500px
+    }
+    
+    #img{
+        width: 120px;
+        
+    
+    }
+    
+    #mejoresJuegos{
+        border: 3px,dashed,blue;
+        background-color: rgba(186, 137, 226, 0.212);
+        font-size: 120%;
+        
+    }
+    
+    
+    
+    
+    
+    table{
+        width: 100%;
+        background-color: rgba(209, 75, 164, 0.048);
+    }
+    #tablaJuegos{
+            text-align: left;
+            border-collapse: collapse;
+            margin: 1em 0 1em 0;
+            caption-side: top;
+            
+    
+    
+         }
+         
+    tbody {
+            border-top: 8px solid rgb(42, 133, 175);
+            border-bottom: 2px groove #000;
+         }
+         tbody th, tfoot th {
+            border: 0;
+         }
+    th{
+            width: 25%;
+         }
+    
+
+#tituloInicio{
+    font-size: 2em;
+    color:cornsilk;
+    background-color: rgb(206, 60, 60);
+    text-align: center;
     
 }
 
-#carrito:hover{
-    cursor:pointer;
-}
-
-#titulo{
-    font-size: 70%;
+body{
+    background-color: rgba(103, 83, 235, 0.164);
 }
 
 
-.buscadorTexto{
-    position: absolute;
-    top: 5px;
-    left: 300px;
-    width: 600px;
-    height: 30px;
-}   
-
-#botonBuscar{
-    position: absolute;
-    top: 40px;
-    left: 300px;
-    width: 605px;
-    height: 30px;
-} 
-
-#principal{
-    position: absolute;
-    top: 50px;
-    left: 500px
-}
-
-#botonBuscar:hover{
-    cursor:pointer;
-}
 
 
-#img{
-    width: 200px;
-    position: relative;
-    top: 0px;
-    left: 50px
-
-}
-
-
-.nombreJuego{
-
-    width: 100px;
-    position: relative;
-    
-    left: 10px;
-}
-
-.precioJuego{
-
-    width: 100px;
-    position: relative;
-    
-    left: 100px;
-}
-
-.ratingJuego{
-
-    width: 100px;
-    position: relative;
-    
-    left: 200px;
-}
-.cantidadJuego{
-
-    width: 100px;
-    position: relative;
-    
-    left: 300px;
-}
-
-html{
-    font-size: 200%;
-}
-
-.mejoresJuegos{
-    border-style: groove;
-  border-width: 3px;
-  background-color: cornsilk;
-    
-}
