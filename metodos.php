@@ -30,7 +30,6 @@
         $result = $conexion->query($sql);
         if ($result->num_rows>0) {
             //si hay
-
             echo "<div id='mejoresJuegos'>
             <table id='tablaJuegos' border=1>";
 
@@ -81,6 +80,44 @@
 
         
     }
+
+
+    function login($usuario, $contrasena){
+
+        $conexion = conectar();
+        if (!$conexion) {
+            echo "Error";
+            return;
+        }
+
+        $sql = "SELECT * FROM usuario WHERE nickname = '$usuario' AND contrasena = '$contrasena' ";
+        $result = $conexion->query($sql);
+        if ($result->num_rows>0) {
+            header('Location: index.php');
+        }else{
+            echo " no se armo, carnal";
+        }
+    }
+
+
+    function registrar($usuario, $contrasena){
+
+        $conexion = conectar();
+        if (!$conexion) {
+            echo "Error";
+            return;
+        }
+
+        $sql = "INSERT * FROM usuario WHERE nickname = '$usuario' AND contrasena = '$contrasena' ";
+        $result = $conexion->query($sql);
+        if ($result->num_rows>0) {
+            header('Location: index.php');
+        }else{
+            echo " no se armo, carnal";
+        }
+    }
+
+
 
     function generarProducto($id){
 
@@ -138,6 +175,8 @@
             <th><img src='imagenes/1.png'  id='carrito' alt=''><a href='carrito.php'> Carrito  </a>
             </th>
             <th><a href='contacto.php'>Contacto</a>
+            </th>
+            <th><a href='login.php'>Log in</a>
             </th>
         </tr>
     </table>";

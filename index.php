@@ -15,7 +15,7 @@
         
     </form>
 
-    </div> 
+    </div>
 
     <h3 id="titulo">Tienda de abarrotes.com</h3>
 
